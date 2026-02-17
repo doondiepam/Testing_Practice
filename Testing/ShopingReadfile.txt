@@ -1,0 +1,12 @@
+Create test_shopping_cart.py
+
+Write tests for:
+
+1️⃣ Cart creation
+2️⃣ Add item success
+3️⃣ Add item invalid price
+4️⃣ Add item invalid quantity
+5️⃣ Remove item success
+6️⃣ Remove item not existing
+7️⃣ Get total calculation
+8️⃣ Clear cart

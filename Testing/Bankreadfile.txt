@@ -1,0 +1,25 @@
+Create file: test_bank.py
+
+Write tests for:
+
+account creation
+
+deposit success
+
+deposit invalid amount
+
+withdraw success
+
+withdraw insufficient balance
+
+transfer success
+
+transfer invalid account
+
+⚠️ Rules:
+
+Use assert
+
+Use pytest.raises
+
+Don’t modify original code

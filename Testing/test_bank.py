@@ -42,17 +42,17 @@ def test_invalid_transfer():
         acc1.transfer("Invalid account", 50)
 
 
-# def test_all_func():
+def test_all_func():
     
-#     acc1 = BankAccount("vivek", 1000)
-#     acc2 = BankAccount("Ram",600)
+    acc1 = BankAccount("vivek", 1000)
+    acc2 = BankAccount("Ram",600)
 
-#     acc1.deposit(500)
+    acc1.deposit(500)
     
-#     acc1.transfer(acc2,100)
+    acc1.transfer(acc2,100)
 
-#     acc2.withdraw(400)
+    acc2.withdraw(400)
 
-#     assert acc1.balance == 1400
-#     assert acc2.balance == 300
+    assert acc1.balance == 1400
+    assert acc2.balance == 3000
 

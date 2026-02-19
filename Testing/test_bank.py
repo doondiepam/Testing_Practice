@@ -56,3 +56,42 @@ def test_all_func():
     assert acc1.balance == 1400
     assert acc2.balance == 3000
 
+# """
+# Write tests for:
+
+# valid login
+
+# wrong password
+
+# user not found
+
+# withdraw success
+
+# withdraw more than balance
+
+
+# Bank should not allow withdraw of negative amount
+# Bank should not allow withdraw of zero amount
+# """
+
+# from bank import login, withdraw
+# import pytest
+# def test_login_valid():
+#     assert login("vivek","1234") == "valid login"
+# def test_worng_password():
+#     with pytest.raisees(ValueError):
+#         login("vivek","5464")
+# def test_user_notfound():
+#     with pytest.raisees(ValueError):
+#         login("doodni","5464")
+# def test_withdraw_scusses():
+#     assert withdraw("vivek",500) == 500
+# def test_Insufficient_value():
+#     with pytest.raisees(ValueError):
+#         withdraw("vivek",500)
+# def test_withdraw_zero_amount():
+#     with pytest.raises(ValueError):
+#         withdraw("vivek", 0)
+# def test_withdraw_negative_amount():
+#     with pytest.raises(ValueError):
+#         withdraw("vivek", -500)

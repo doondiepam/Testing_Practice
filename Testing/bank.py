@@ -24,3 +24,20 @@ class BankAccount:
         self.withdraw(amount)
         other_account.deposit(amount)
         return self.balance, other_account.balance
+
+
+# users = {"vivek": "1234"}
+# balance = {"vivek": 1000}
+
+# def login(username, password):
+#     if username not in users:
+#         raise ValueError("User not found")
+#     if users[username] != password:
+#         raise ValueError("Wrong password")
+#     return "success"
+
+# def withdraw(username, amount):
+#     if amount > balance[username]:
+#         raise ValueError("Insufficient funds")
+#     balance[username] -= amount
+#     return balance[username]    

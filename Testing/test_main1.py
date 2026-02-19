@@ -15,3 +15,5 @@ def test_divid():
 def test_divid_zero():
     with pytest.raises(ValueError):
         divide(20,0)
+
+

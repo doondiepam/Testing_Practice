@@ -1,5 +1,5 @@
 
-from Main1 import add, sub, multiply, divide
+from Testing_Practice.Testing.Types_testing.Main1 import add, sub, multiply, divide
 
 def test_all_functions():
     assert add(2,3) == 5

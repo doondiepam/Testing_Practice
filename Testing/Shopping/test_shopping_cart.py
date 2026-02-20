@@ -1,5 +1,5 @@
 
-from shopping_cart import ShoppingCart
+from Testing_Practice.Testing.Shopping.shopping_cart import ShoppingCart
 import pytest
 
 def test_cart_creation():

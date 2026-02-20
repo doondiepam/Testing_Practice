@@ -1,6 +1,6 @@
 
-from Main1 import add 
-from Main1 import divide
+from Testing_Practice.Testing.Types_testing.Main1 import add 
+from Testing_Practice.Testing.Types_testing.Main1 import divide
 import pytest
 
 def test_add():

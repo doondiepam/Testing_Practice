@@ -1,7 +1,6 @@
 
-from Testing_Practice.Testing.BANK.bank import BankAccount
+from bank import BankAccount
 import pytest
-
 
 
 

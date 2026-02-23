@@ -9,7 +9,6 @@ class BankAccount:
             raise ValueError("Deposit must be positive")
         self.balance += amount
         return self.balance
-
     def withdraw(self, amount):
         if amount <= 0:
             raise ValueError("Withdraw must be positive")
@@ -17,15 +16,12 @@ class BankAccount:
             raise ValueError("Insufficient funds")
         self.balance -= amount
         return self.balance
-
     def transfer(self, other_account, amount):
         if not isinstance(other_account, BankAccount):
             raise TypeError("Invalid account")
         self.withdraw(amount)
         other_account.deposit(amount)
         return self.balance, other_account.balance
-
-
 # users = {"vivek": "1234"}
 # balance = {"vivek": 1000}
 

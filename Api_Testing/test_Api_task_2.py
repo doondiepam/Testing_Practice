@@ -10,46 +10,6 @@ def baseurl():
 def resource():
     return ["posts", "comments", "albums", "photos", "todos", "users"]
 
-
-# def test_nub_resource(baseurl,resource):
-#     for r in resource:
-#         responce = requests.get(f"{baseurl}/{r}")
-#         data = responce.json()
-#         print(f"{r}:",len(data))
-
-#         assert responce.status_code == 200
-
-# def test_get_resource(baseurl,resource):
-#     for r in resource:
-#         responce = requests.get(f"{baseurl}/{r}/1")
-#         print(f"{r}:",responce.status_code)
-#         assert responce.status_code == 200
-#         assert "id" in responce.json()
-#         print(responce.json())
-
-# def test_update_resource(baseurl,resource):
-#     update_data = {"title" : "Api testing"}
-#     for r in resource:
-#         responce = requests.put(f"{baseurl}/{r}/1",json=update_data)
-#         print(f"{r}",responce.status_code)
-        
-#         assert responce.status_code == 200
-#         assert "title" in responce.json()
-#         print(responce.json())
-
-
-# def test_delete_resource(baseurl,resource):
-#     for r in resource:
-#         responce = requests.delete(f"{baseurl}/{r}/1")
-#         print(f"{r}",responce.status_code)
-#         assert responce.status_code == 200
-
-# def test_new_resource(baseurl,resource):
-
-    
-#     pass
-        
-
 def test_num_resourses(baseurl,resource):
     for r in resource:
         responce = requests.get(f"{baseurl}/{r}")
@@ -71,14 +31,29 @@ def test_modify_data(baseurl,resource):
     update_data = {"title" : "Api testing"}
     for r in resource:
         responce = requests.put(f"{baseurl}/{r}/1",json=update_data)
-        print("{r} updated ststues:",responce.json)
+        print("{r} updated ststues:",responce.json())
         assert responce.status_code == 200
         assert "title" in responce.json()
         print(responce.json())
 
 def test_delete_data(baseurl,resource):
     for r in resource:
-        responce = requests.get(f"{baseurl}/{r}/1")
+        responce = requests.delete(f"{baseurl}/{r}/1")
         print(f"{r}-delete staues:",responce.status_code)
         assert responce.status_code == 200
+        assert responce.json() == {}
         print(responce.json())
+
+
+def test_create_resource(baseurl, resource):
+    new_data = {
+        "title": "Test Title",
+        "body": "Test Body",
+        "userId": 1
+    }
+    for r in resource:
+        responce = requests.post(f"{baseurl}/{r}", json=new_data)
+        data = responce.json()
+        print(f"{r} POST:", data)
+        assert responce.status_code == 201
+        assert "id" in data
